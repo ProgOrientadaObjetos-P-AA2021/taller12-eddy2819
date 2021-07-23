@@ -13,5 +13,44 @@ public class Estudiante {
     // # edadEstudiante: Entero
     protected int edadEstudiante;
     
+    public void establecerNombresEstudiante(String m){
+        nombresEstudiante = m;
+    }
+  
+    
+    public void establecerApellidoEstudiante(String a){
+        apellidosEstudiante = a;
+    }
+    
+    
+    public void establecerIdentificacionEstudiante(String i){
+        identificacionEstudiante = i;
+    }
+
+    
+    public void establecerEdadEstudiante(int e){
+        edadEstudiante = e;
+    }
+    
+    
+    public String obtenerNombresEstudiante(){
+        return nombresEstudiante;  
+    }
+ 
+   
+    public String obtenerApellidoEstudiante(){
+        return apellidosEstudiante; 
+    }
+
+    
+    public String obtenerIdentificacionEstudiante(){
+        return identificacionEstudiante; 
+    }
+
+   
+    public int obtenerEdadEstudiante(){
+        return edadEstudiante;
+    }
+
 
 }

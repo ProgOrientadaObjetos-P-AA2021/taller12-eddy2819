@@ -65,7 +65,7 @@ public class EstudianteDistanciaTest {
     /**
      * Test of obtenerNotas method, of class EstudianteDistancia.
      */
-    @Test
+    /*@Test
     public void testObtenerNotas() {
         System.out.println("obtenerNotas");
         ArrayList<Nota> ns = null;
@@ -73,7 +73,7 @@ public class EstudianteDistanciaTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-
+*/
     
     @Test
     public void testEstablecerMejorNota() throws
@@ -141,7 +141,7 @@ public class EstudianteDistanciaTest {
         ns.add(new Nota(6.0));
         double expResult = 5.0;
         instance.establecerNotas(ns);
-        instance.establecerMejorNota();
+        instance.establecerPeorNota();
         double result = instance.obtenerPeorNota();
         
         assertEquals(expResult, result, 0.0);
@@ -177,7 +177,7 @@ public class EstudianteDistanciaTest {
         ns.add(new Nota(6.0));
         double expResult = 7.0;
         instance.establecerNotas(ns);
-        instance.establecerMejorNota();
+        instance.establecerPromedio();
         double result = instance.obtenerMejorPromedio();
         
         assertEquals(expResult, result, 0.0);
@@ -187,14 +187,15 @@ public class EstudianteDistanciaTest {
      * Test of toString method, of class EstudianteDistancia.
      */
     @Test
-    public void testToString() {
+    
+     public void testToString() {
         System.out.println("toString");
-        
+
         ArrayList<Nota> ns = new ArrayList<>();
         ns.add(new Nota(10.0));
         ns.add(new Nota(5.0));
         ns.add(new Nota(6.0));
-        
+
         instance.establecerNotas(ns);
         instance.establecerMejorNota();
         instance.establecerPeorNota();
@@ -202,19 +203,19 @@ public class EstudianteDistanciaTest {
         instance.establecerNombresEstudiante("Andrea");
         instance.establecerApellidoEstudiante("Vela");
         instance.establecerIdentificacionEstudiante("98981234");
-        
+
         String expResult = "Nombre Estudiante: Andrea Vela\n"
                 + "Cédula: 98981234"
                 + "Notas: \n"
-                + "10.0"
-                + "5.0"
-                + "6.0"
-                + "Proemdio: 7.0"
-                + "Mejor Nota: 10.0"
-                + "Peor Nota: 5.0";
+                + "10,0"
+                + "5,0"
+                + "6,0"
+                + "Promedio: 7,0"
+                + "Mejor Nota: 10,0"
+                + "Peor Nota: 5,0";
         String result = instance.toString();
         assertEquals(expResult, result);
-        
-    }
 
+    }
 }
+
